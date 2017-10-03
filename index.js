@@ -21,8 +21,9 @@ app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 * 30 }}));
 app.use(flash());
 
 app.get("/",function(req, res){
-  res.redirect('/index');
+  res.redirect('/waiters/:username');
 });
+
 
 app.get('/waiters/:username', waiters.index);
 app.post('/waiters/:username', waiters.index);
