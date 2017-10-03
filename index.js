@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const flash = require('express-flash');
 const session = require('express-session');
 const Models = require('./models');
-const models = Models(process.env.MONGO_DB_URL || 'mongodb://localhost/anton-waiter');
+const models = Models(process.env.MONGO_DB_URL || 'mongodb://localhost/waiter_webapp');
 const app = express();
 const waiters = Waiters(models);
 
