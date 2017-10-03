@@ -1,0 +1,32 @@
+body {
+  color: skyblue;
+
+}
+
+table {
+    width: 100%;
+
+}
+
+div {
+  border: 2px solid;
+  /*word-wrap: break-word;*/
+  display: inline-block;
+  width: 50%;
+  height: 25%;
+
+}
+h3 {
+  color: black;
+}
+
+ul {
+  list-style: none;
+  display: inline;
+
+
+}
+li {
+  color: black;
+
+}

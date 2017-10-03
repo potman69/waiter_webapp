@@ -1,0 +1,66 @@
+<center>
+  <h1>Welcome To display waiters!</h1>
+  <h2>Days colored green has enough waiters.</h2>
+  <h2>Days colored blue/white we still need waiters.</h2>
+  <h2>Days colored red we are over subscribed!</h2>
+
+  <table >
+    <div class="Monday" style="background-color:  {{MondayStatus}}">
+      <h3>Monday</h3>
+      <ul>
+        {{#each Monday}}
+        <li>{{this}}</li>
+        {{/each }}
+      </ul>
+    </div>
+    <div class="Tuesday" style="background-color: {{TuesdayStatus}}">
+      <h3>Tuesday</h3>
+      <ul>
+        {{#each Tuesday}}
+        <li>{{this}}</li>
+        {{/each }}
+      </ul>
+    </div>
+    <div class="Wednesday" style="background-color: {{WednesdayStatus}}">
+      <h3>Wednesday</h3>
+      <ul>
+        {{#each Wednesday}}
+        <li>{{this}}</li>
+        {{/each }}
+      </ul>
+    </div>
+    <div class="Thursday" style="background-color: {{ThursdayStatus}}">
+      <h3>Thursday</h3>
+      <ul>
+        {{#each Thursday}}
+        <li>{{this}}</li>
+        {{/each }}
+      </ul>
+    </div>
+    <div class="Friday" style="background-color: {{FridayStatus}}">
+      <h3>Friday</h3>
+      <ul>
+        {{#each Friday}}
+        <li>{{this}}</li>
+        {{/each }}
+      </ul>
+    </div>
+    <div class="Saturday" style="background-color: {{SaturdayStatus}}">
+      <h3>Saturday</h3>
+      <ul>
+        {{#each Saturday}}
+        <li>{{this}}</li>
+        {{/each }}
+      </ul>
+    </div>
+    <div class="Sunday" style="background-color: {{SundayStatus}}">
+      <h3>Sunday</h3>
+      <ul>
+        {{#each Sunday}}
+        <li>{{this}}</li>
+        {{/each }}
+      </ul>
+    </div>
+  </table>
+
+</center>
