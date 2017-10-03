@@ -9,6 +9,8 @@ const models = Models(process.env.MONGO_DB_URL || 'mongodb://localhost/waiter_we
 const app = express();
 const waiters = Waiters(models);
 
+
+
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
@@ -28,10 +30,11 @@ app.get("/",function(req, res){
 app.get('/waiters/:username', waiters.index);
 app.post('/waiters/:username', waiters.index);
 app.get('/days', waiters.days);
+app.post('/reset',waiters.reset);
 
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3007;
 
 app.listen(port, function(){
     console.log('Web app started on port : ' + process.env.PORT || port);

@@ -1,6 +1,19 @@
 module.exports = function(models) {
 
 
+  const reset = function(req, res){
+    var waiters = {
+        name: req.params.username,
+        days: req.body.days
+      };
+    models.Waiters.remove({},function(err, results){
+      res.redirect('days');
+
+    });
+
+  }
+
+
     const index = function(req, res) {
       var waiters = {
           name: req.params.username,
@@ -60,6 +73,8 @@ module.exports = function(models) {
           SundayStatus: 'white'
         }
 
+
+
         models.Waiters.find({}, function(err, results){
 
           if(err){
@@ -93,6 +108,7 @@ module.exports = function(models) {
 
         return {
             index,
-            days
+            days,
+            reset
           }
 }
