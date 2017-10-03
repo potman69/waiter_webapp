@@ -37,5 +37,5 @@ app.post('/reset',waiters.reset);
 const port = process.env.PORT || 3007;
 
 app.listen(port, function(){
-    console.log('Web app started on port : ' + process.env.PORT || port);
+    console.log('Web app started on port : ' + port || process.env.PORT );
 });
